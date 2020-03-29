@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/swipeAC"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".ACControlActivity">
+
+  <android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <TextView
+    android:id="@+id/acRemoteTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="40dp"
+    android:fontFamily="@font/montserratregular"
+    android:text="AC REMOTE"
+    android:textColor="#0F2764"
+    android:textSize="25dp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <ImageView
+    android:id="@+id/powerButtonImageView"
+    android:layout_width="75dp"
+    android:layout_height="75dp"
+    android:layout_marginStart="155dp"
+    android:layout_marginLeft="155dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="156dp"
+    android:layout_marginRight="156dp"
+    android:tag="off"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/acRemoteTextView"
+    app:srcCompat="@drawable/iconspboff" />
+
+  <ImageView
+    android:id="@+id/tempUpImageView"
+    android:layout_width="75dp"
+    android:layout_height="75dp"
+    android:layout_marginTop="250dp"
+    android:layout_marginEnd="50dp"
+    android:layout_marginRight="50dp"
+    android:rotation="90"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/plus" />
+
+  <TextView
+    android:id="@+id/setTemp"
+    android:layout_width="wrap_content"
+    android:layout_height="81dp"
+    android:layout_marginStart="6dp"
+    android:layout_marginLeft="6dp"
+    android:layout_marginEnd="6dp"
+    android:layout_marginRight="6dp"
+    android:fontFamily="@font/opensanssemibold"
+    android:text="0"
+    android:textSize="40dp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toStartOf="@+id/tempUpImageView"
+    app:layout_constraintHorizontal_bias="0.511"
+    app:layout_constraintStart_toEndOf="@+id/tempDownimageView"
+    app:layout_constraintTop_toBottomOf="@+id/tempTextView" />
+
+  <ImageView
+    android:id="@+id/tempDownimageView"
+    android:layout_width="75dp"
+    android:layout_height="75dp"
+    android:layout_marginStart="50dp"
+    android:layout_marginLeft="50dp"
+    android:layout_marginTop="250dp"
+    android:rotation="270"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/minus" />
+
+  <TextView
+    android:id="@+id/tempTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="120dp"
+    android:layout_marginLeft="120dp"
+    android:layout_marginTop="50dp"
+    android:layout_marginEnd="120dp"
+    android:layout_marginRight="120dp"
+    android:fontFamily="@font/montserratregular"
+    android:text="Temperature (°C)"
+    android:textColor="#0F2764"
+    android:textSize="18dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/powerButtonImageView" />
+
+  <TextView
+    android:id="@+id/fanSpeedTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="152dp"
+    android:layout_marginLeft="152dp"
+    android:layout_marginTop="22dp"
+    android:layout_marginEnd="151dp"
+    android:layout_marginRight="151dp"
+    android:fontFamily="@font/montserratregular"
+    android:text=" Fan Speed"
+    android:textColor="#0F2764"
+    android:textSize="18dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tempUpImageView" />
+
+  <TextView
+    android:id="@+id/fanStatusTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="170dp"
+    android:layout_marginLeft="170dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="170dp"
+    android:layout_marginRight="170dp"
+    android:fontFamily="@font/montserratregular"
+    android:text="Medium"
+    android:textAlignment="center"
+    android:textColor="#0D24B4"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/fanSpeedTextView" />
+
+  <android.support.v7.widget.GridLayout
+    android:id="@+id/gridLayouts"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/fanStatusTextView">
+
+    <ImageView
+      android:id="@+id/lowFanImageView"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:onClick="fanSlow"
+      app:layout_columnWeight="2"
+      app:layout_gravity="right"
+      app:layout_rowWeight="0"
+      app:srcCompat="@drawable/fanslow"
+      tools:layout_editor_absoluteX="91dp"
+      tools:layout_editor_absoluteY="539dp" />
+
+    <ImageView
+      android:id="@+id/mediumFanImageView"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:onClick="fanMedium"
+      app:layout_column="1"
+      app:layout_columnWeight="2"
+      app:layout_gravity="center"
+      app:layout_row="0"
+      app:layout_rowWeight="0"
+      app:srcCompat="@drawable/fanmedium"
+      tools:layout_editor_absoluteX="166dp"
+      tools:layout_editor_absoluteY="539dp" />
+
+    <ImageView
+      android:id="@+id/fanFastImageView"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:onClick="fanHigh"
+      app:layout_columnWeight="2"
+      app:layout_gravity="left"
+      app:layout_rowWeight="0"
+      app:srcCompat="@drawable/fanfast"
+      tools:layout_editor_absoluteX="241dp"
+      tools:layout_editor_absoluteY="539dp" />
+
+
+  </android.support.v7.widget.GridLayout>
+
+
+</android.support.constraint.ConstraintLayout>
+
+  </android.support.v4.widget.SwipeRefreshLayout>

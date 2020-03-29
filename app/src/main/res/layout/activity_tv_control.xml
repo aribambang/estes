@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ android:id="@+id/swipeTV"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".TVControlActivity">
+
+  <android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+      android:id="@+id/switchImageView"
+      android:layout_width="75dp"
+      android:layout_height="75dp"
+      android:layout_marginTop="10dp"
+      android:onClick="buttonTv"
+      android:tag="off"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/remoteTextView"
+      app:srcCompat="@drawable/iconspboff" />
+
+    <ImageView
+      android:id="@+id/volumeUpImageView"
+      android:layout_width="75dp"
+      android:layout_height="75dp"
+      android:layout_marginStart="25dp"
+      android:layout_marginLeft="25dp"
+      android:layout_marginTop="250dp"
+      android:layout_marginEnd="101dp"
+      android:layout_marginRight="101dp"
+      android:onClick="volumeUp"
+      app:layout_constraintEnd_toStartOf="@+id/channelUpImageView"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/plus" />
+
+    <TextView
+      android:id="@+id/volumeTextView"
+      android:layout_width="70dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="40dp"
+      android:layout_marginLeft="40dp"
+      android:layout_marginTop="4dp"
+      android:layout_marginEnd="119dp"
+      android:layout_marginRight="119dp"
+      android:layout_marginBottom="5dp"
+      android:fontFamily="@font/montserratregular"
+      android:text="Volume"
+      android:textColor="#0F2764"
+      android:textSize="18dp"
+      android:typeface="sans"
+      app:layout_constraintBottom_toTopOf="@+id/volumeDownImageView"
+      app:layout_constraintEnd_toStartOf="@+id/channelTextView"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/volumeUpImageView" />
+
+    <ImageView
+      android:id="@+id/volumeDownImageView"
+      android:layout_width="75dp"
+      android:layout_height="75dp"
+      android:layout_marginStart="25dp"
+      android:layout_marginLeft="25dp"
+      android:layout_marginTop="5dp"
+      android:layout_marginEnd="101dp"
+      android:layout_marginRight="101dp"
+      android:onClick="volumeDown"
+      android:rotation="180"
+      app:layout_constraintEnd_toStartOf="@+id/ChannelDownImageView"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/volumeTextView"
+      app:srcCompat="@drawable/minus" />
+
+    <ImageView
+      android:id="@+id/channelUpImageView"
+      android:layout_width="75dp"
+      android:layout_height="75dp"
+      android:layout_marginTop="250dp"
+      android:layout_marginEnd="55dp"
+      android:layout_marginRight="55dp"
+      android:onClick="channelUp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/up" />
+
+    <TextView
+      android:id="@+id/channelTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp"
+      android:layout_marginEnd="55dp"
+      android:layout_marginRight="55dp"
+      android:layout_marginBottom="5dp"
+      android:fontFamily="@font/montserratregular"
+      android:text="Channel"
+      android:textAlignment="center"
+      android:textColor="#0F2764"
+      android:textColorHint="#008D1414"
+      android:textSize="18dp"
+      android:textStyle="normal"
+      app:layout_constraintBottom_toTopOf="@+id/ChannelDownImageView"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/channelUpImageView" />
+
+    <ImageView
+      android:id="@+id/ChannelDownImageView"
+      android:layout_width="75dp"
+      android:layout_height="75dp"
+      android:layout_marginTop="5dp"
+      android:layout_marginEnd="55dp"
+      android:layout_marginRight="55dp"
+      android:onClick="channelDown"
+      android:rotation="180"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/channelTextView"
+      app:srcCompat="@drawable/up" />
+
+    <TextView
+      android:id="@+id/remoteTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="40dp"
+      android:fontFamily="@font/montserratregular"
+      android:tag="remotePush"
+      android:text="TV REMOTE"
+      android:textColor="#0F2764"
+      android:textSize="25dp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+
+  </android.support.constraint.ConstraintLayout>
+
+  </android.support.v4.widget.SwipeRefreshLayout>

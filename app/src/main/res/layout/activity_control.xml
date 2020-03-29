@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    android:id="@+id/swipe"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ControlActivity">
+
+  <android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+      android:id="@+id/textView4"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="40dp"
+      android:fontFamily="@font/montserratbold"
+      android:text="SMART CONTROL"
+      android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+      android:textColor="#0F2764"
+      android:textSize="25dp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.497"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+      android:id="@+id/smartRemotetextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="40dp"
+      android:fontFamily="@font/montserratregular"
+      android:text="SMART REMOTE"
+      android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+      android:textColor="#0F2764"
+      android:textSize="20dp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/mainGrid" />
+
+
+    <GridLayout
+      android:id="@+id/mainGrid"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="16dp"
+      android:layout_marginStart="10dp"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="20dp"
+      android:layout_marginEnd="10dp"
+      android:layout_marginRight="10dp"
+      android:layout_weight="1"
+      android:alignmentMode="alignMargins"
+      android:columnCount="3"
+      android:columnOrderPreserved="false"
+      android:rowCount="2"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.495"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+      <android.support.v7.widget.CardView
+        android:id="@+id/card_view_RTU"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:tag="off"
+        app:cardCornerRadius="4dp"
+        app:layout_gravity="center">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_gravity="center"
+          android:orientation="vertical">
+
+          <TextView
+            android:id="@+id/rtuTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ruang Tamu"
+            android:textAlignment="center"
+            android:textColor="#0F2764"
+            android:textSize="10dp" />
+
+          <ImageView
+            android:id="@+id/rtuImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/off" />
+
+          <ImageView
+            android:id="@+id/toglleRTUImageView"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/toggleblueoff" />
+
+        </LinearLayout>
+
+      </android.support.v7.widget.CardView>
+
+
+      <android.support.v7.widget.CardView
+
+        android:id="@+id/card_view_KTA"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:tag="off"
+        app:cardCornerRadius="4dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_gravity="center"
+          android:orientation="vertical">
+
+          <TextView
+            android:id="@+id/ktaTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kamar Tidur Anak"
+            android:textAlignment="center"
+            android:textColor="#0F2764"
+            android:textSize="10dp" />
+
+          <ImageView
+            android:id="@+id/ktaImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/off" />
+
+          <ImageView
+            android:id="@+id/toggleKTAImageView"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/toggleblueoff" />
+
+        </LinearLayout>
+      </android.support.v7.widget.CardView>
+
+      <android.support.v7.widget.CardView
+        android:id="@+id/card_view_KTU"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:tag="off"
+        app:cardCornerRadius="4dp"
+        app:layout_gravity="center">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_gravity="center"
+          android:orientation="vertical">
+
+          <TextView
+            android:id="@+id/ktuTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kamar Tidur Utama"
+            android:textAlignment="center"
+            android:textColor="#0F2764"
+            android:textSize="10dp" />
+
+          <ImageView
+            android:id="@+id/ktuImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/off" />
+
+          <ImageView
+            android:id="@+id/toggleKTUImageView"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/toggleblueoff" />
+
+        </LinearLayout>
+      </android.support.v7.widget.CardView>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_rowSpan="1"
+        android:layout_columnSpan="3"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp">
+
+        <android.support.v7.widget.CardView
+          android:id="@+id/card_view_RKD"
+          android:layout_width="100dp"
+          android:layout_height="85dp"
+          android:layout_marginLeft="16dp"
+          android:layout_marginRight="0dp"
+          android:layout_marginBottom="16dp"
+          android:tag="off"
+          app:cardCornerRadius="4dp"
+          app:layout_gravity="center">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+              android:id="@+id/rkdTextView"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="right"
+              android:text="Ruang "
+              android:textAllCaps="false"
+              android:textColor="#0F2764"
+              android:textSize="10dp" />
+
+            <ImageView
+              android:id="@+id/rkdimageView"
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:layout_gravity="center"
+              app:srcCompat="@drawable/off" />
+
+            <ImageView
+              android:id="@+id/toggleRKDImageView"
+              android:layout_width="60dp"
+              android:layout_height="20dp"
+              android:layout_gravity="center"
+              app:srcCompat="@drawable/toggleblueoff" />
+
+          </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+
+          android:id="@+id/card_view_PLUG"
+          android:layout_width="100dp"
+          android:layout_height="85dp"
+          android:layout_marginLeft="0dp"
+          android:layout_marginRight="16dp"
+          android:layout_marginBottom="16dp"
+          android:tag="off"
+          app:cardCornerRadius="4dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+              android:id="@+id/plugTextView"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="left"
+              android:text=" Keluarga"
+              android:textColor="#0F2764"
+              android:textSize="10dp" />
+
+            <ImageView
+              android:id="@+id/plugImageView"
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:layout_gravity="center"
+              app:srcCompat="@drawable/plugoff" />
+
+            <ImageView
+              android:id="@+id/togglePlugImageView"
+              android:layout_width="60dp"
+              android:layout_height="20dp"
+              android:layout_gravity="center"
+              app:srcCompat="@drawable/toggleblueoff" />
+
+
+          </LinearLayout>
+        </android.support.v7.widget.CardView>
+      </LinearLayout>
+
+    </GridLayout>
+
+    <android.support.v7.widget.GridLayout
+      android:id="@+id/gridLayouts"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/smartRemotetextView">
+
+
+      <ImageView
+        android:id="@+id/acImageView"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:onClick="ACClick"
+        app:layout_column="0"
+        app:layout_columnWeight="1"
+        app:layout_gravity="center"
+        app:layout_row="0"
+        app:layout_rowWeight="0"
+        app:srcCompat="@drawable/acnew" />
+
+      <ImageView
+        android:id="@+id/tvImageView"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:onClick="TVClick"
+        app:layout_column="1"
+        app:layout_columnWeight="1"
+        app:layout_gravity="center"
+        app:layout_row="0"
+        app:layout_rowWeight="0"
+        app:srcCompat="@drawable/tvnew" />
+
+    </android.support.v7.widget.GridLayout>
+  </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.SwipeRefreshLayout>
